@@ -43,7 +43,7 @@
 	    </div>
 
      	<!-- Button trigger modal -->
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" background-color="rgba(255, 255, 99, .6)">
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="pickRandomImage()">
 		  modal
 		</button>
 
@@ -57,11 +57,12 @@
 		        <h4 class="modal-title" id="myModalLabel">yo</h4>
 		      </div>
 		      <div class="modal-body" overflow="hidden">
-		        <img href="http://i.dailymail.co.uk/i/pix/2014/10/15/1413409646811_Image_galleryImage__EXCLUSIVE_STRICT_ONLINE_.JPG">
+		        modal modal
+		        <img src="http://i.dailymail.co.uk/i/pix/2014/10/15/1413409646811_Image_galleryImage__EXCLUSIVE_STRICT_ONLINE_.JPG" size="100">
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
+		        <!--button type="button" class="btn btn-primary">Save changes</button-->
 		      </div>
 		    </div>
 		  </div>
@@ -76,6 +77,18 @@
     <script type="text/javascript">
     	$('h1').html('nyoom');
     	$('p').html('#justkeepcoding');
+
+    	function pickRandomImage() {
+    		var modal = document.getElementById("myModal");
+    		var imageList = ["http://i.dailymail.co.uk/i/pix/2014/10/15/1413409646811_Image_galleryImage__EXCLUSIVE_STRICT_ONLINE_.JPG",
+    					"http://i1.nyt.com/images/2015/06/05/fashion/20150605DRESSCODES-slide-880W/20150605DRESSCODES-slide-880W-slide.jpg",
+    					"http://36.media.tumblr.com/b83b9cd6f3280395b657fff51197b342/tumblr_nn61elqbS41s4yg05o1_500.jpg",
+    					"https://pbs.twimg.com/media/Btz-VvzCcAAVlOL.jpg",
+    					"http://67.media.tumblr.com/2f3eada9bc10adf6c4a18d60ea2977d7/tumblr_nve69vTwFK1s4yg05o1_500.jpg",
+    					];
+    		var image = images[Math.random() * imageList.length];
+    		modal.innerhtml = "changed!";
+    	}
     </script>
 
 
